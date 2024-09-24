@@ -1,0 +1,88 @@
+/* Barra de pesquisa */
+.searchbar {
+  margin: 15vh auto; /* Espaço no topo para centralizar */
+  width: 66.6rem; /* Ajuste de largura */
+  max-width: 100%; /* Garantir que a barra não ultrapasse a largura da tela */
+  height: 3.5rem; /* Aumentar a altura da barra */
+  border-radius: 5rem; /* Ajustar bordas arredondadas */
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  border-image: linear-gradient(
+      262deg,
+      #952896 30.65%,
+      #1364c8 60.99%,
+      #1aae75 88.44%
+    )
+    1;
+  background-color: #0b0b0b;
+  display: flex;
+  align-items: center; /* Centralizar verticalmente */
+  justify-content: space-between; /* Espaçar o input e o ícone */
+}
+
+/* Campo de entrada de pesquisa */
+.search_input {
+  width: 90%; /* Ocupa a maior parte da barra de pesquisa */
+  line-height: 2.5rem;
+  border: none; /* Remove bordas */
+  outline: none; /* Remove borda de foco */
+  color: #fff; /* Cor do texto */
+  background-color: #0b0b0b;
+  font-size: 1.1rem;
+}
+
+/* Ícone de pesquisa */
+.search_icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent; /* Fundo transparente */
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-image: linear-gradient(
+      262deg,
+      #952896 30.65%,
+      #1364c8 60.99%,
+      #1aae75 88.44%
+    )
+    1; /* Para corresponder ao estilo do campo */
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+  .searchbar {
+    width: 90%; /* Ocupar mais largura em telas pequenas */
+    height: 3rem; /* Ajustar altura para dispositivos menores */
+    margin-top: 10vh; /* Reduzir o espaço no topo */
+  }
+
+  .search_input {
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+  }
+
+  .search_icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .searchbar {
+    width: 100%; /* Ocupar toda a largura da tela */
+    height: 3rem;
+  }
+
+  .search_input {
+    font-size: 0.875rem; /* Diminuir o tamanho da fonte para telas muito pequenas */
+  }
+
+  .search_icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}

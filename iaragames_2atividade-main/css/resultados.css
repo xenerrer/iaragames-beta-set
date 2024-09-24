@@ -1,0 +1,239 @@
+/* Reset de fontes */
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores de fundo e texto */
+.bg-dark-custom {
+    background-color: #0B0B0B;
+    color: white;
+}
+
+/* Navbar personalizada */
+.custom-navbar {
+    background-color: #131313;
+    border-radius: 0 0 4rem 4rem;
+    box-shadow: 0 0 1.25rem 0.625rem rgba(8, 2, 187, 0.5);
+}
+
+/* Texto com cor gradiente */
+.text-color-custom {
+    background: linear-gradient(262deg, #952896 30.65%, #1364C8 60.99%, #1AAE75 88.44%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Barra de pesquisa */
+.searchbar {
+    margin: 10vh auto;
+    width: 40rem;
+    height: 4rem;
+    background-color: #181818;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    border-image: linear-gradient(262deg, #952896 30.65%, #1364C8 60.99%, #1AAE75 88.44%) 1;
+}
+
+.search_input {
+    width: 85%;
+    background-color: #181818;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 2rem;
+    outline: none;
+    padding: 0 1rem;
+}
+
+.search_icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+/* Container de resultados */
+#game-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Card personalizado para os jogos */
+.custom-card {
+    width: 22rem;
+    background-color: #131313;
+    color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* Fundo gradiente no card */
+.custom-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, rgba(26,174,117,1) 0%, rgba(19,100,200,1) 50%, rgba(149,40,150,1) 100%);
+    border-radius: 1rem;
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+/* Estilo do título */
+.custom-card h5 {
+    font-size: 1.25rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo do gênero */
+.custom-card p {
+    font-size: 1rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+/* Estilo do botão */
+.btn-custom {
+    background-color: #1a6ec2;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #145a99;
+}
+
+/* Estilo da imagem */
+.card-img-top {
+    border-radius: 39px;
+}
+
+
+/* Estilo do botão */
+.btn-custom {
+    background-color: #6200ea;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #3700b3;
+}
+
+/* Estilo da imagem do jogo */
+.custom-card img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Botão de ação personalizado dentro do card */
+.botão {
+    position: relative;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(26,174,117,1) 0%, rgba(19,100,200,1) 50%, rgba(149,40,150,1) 100%);
+    border: 1px transparent;
+    z-index: 1;
+}
+
+.botão:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, rgba(26,174,117,1) 0%, rgba(19,100,200,1) 50%, rgba(149,40,150,1) 100%);
+    border-radius: 10px;
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .searchbar {
+        width: 90%;
+        height: 3.5rem;
+    }
+
+    .search_input {
+        font-size: 0.875rem;
+    }
+
+    .search_icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #game-info {
+        gap: 1.5rem;
+    }
+
+    .custom-card {
+        width: 100%;
+    }
+
+    .btn-custom {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .searchbar {
+        width: 100%;
+        height: 3rem;
+    }
+
+    .custom-card {
+        width: 100%;
+    }
+
+    .search_input {
+        font-size: 0.75rem;
+    }
+
+    .search_icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .btn-custom {
+        font-size: 0.75rem;
+    }
+}
